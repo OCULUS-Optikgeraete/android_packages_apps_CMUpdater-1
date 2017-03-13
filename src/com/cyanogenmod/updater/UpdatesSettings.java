@@ -138,7 +138,7 @@ public class UpdatesSettings extends PreferenceFragment implements
         // Load the stored preference data
         mPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
         if (mUpdateCheck != null) {
-            int check = mPrefs.getInt(Constants.UPDATE_CHECK_PREF, Constants.UPDATE_FREQ_WEEKLY);
+            int check = mPrefs.getInt(Constants.UPDATE_CHECK_PREF, Constants.UPDATE_FREQ_NONE);
             mUpdateCheck.setValue(String.valueOf(check));
             mUpdateCheck.setSummary(mapCheckValue(check));
             mUpdateCheck.setOnPreferenceChangeListener(this);
