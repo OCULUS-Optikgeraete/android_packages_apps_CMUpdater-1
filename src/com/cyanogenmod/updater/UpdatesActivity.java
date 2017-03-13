@@ -45,7 +45,7 @@ public class UpdatesActivity extends AppCompatActivity {
         mSettingsFragment = new UpdatesSettings();
 
         mInstalled = Utils.getInstalledVersion().split("-");
-        mHeaderCm.setText(String.format(getString(R.string.header_os), mInstalled[0]));
+        mHeaderCm.setText(getString(R.string.header_os));
 
         getFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, mSettingsFragment).commit();
